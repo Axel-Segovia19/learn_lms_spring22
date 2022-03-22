@@ -4,7 +4,9 @@ import Footer from "./components/shared/Footer";
 import Home from './components/shared/Home';
 import Courses from "./components/courses/Courses";
 import Users from "./components/users/Users";
-import Nomatch from "./components/shared/Nomatch";
+import Nomatch from "./components/shared/NoMatch";
+import UserShow from "./components/users/UserShow";
+import CourseShow from "./components/courses/CourseShow";
 
 const App = () => (
   <>
@@ -12,7 +14,9 @@ const App = () => (
     <Routes>
       <Route path='/' element={ <Home /> } />
       <Route path='/courses' element={ <Courses /> } />
+      <Route path='/courses/:courseId' element={ <CourseShow /> } />
       <Route path='/users' element={ <Users /> } />
+      <Route path='/users/:userId' element={ <UserShow /> } />
       <Route path='*' element={ <Nomatch /> } />
     </Routes>
     <Footer />
